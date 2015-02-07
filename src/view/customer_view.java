@@ -6,6 +6,7 @@ package view;
 
 import controler.customer_controler;
 import model.add_customer_model;
+import validation.AutoGenerate;
 
 /**
  *
@@ -17,7 +18,13 @@ public class customer_view extends javax.swing.JFrame {
      * Creates new form customer_view
      */
     public customer_view() {
+        
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
+        
+        String id= AutoGenerate.getNextID("customer", "cust_id", "CUS");
+        tbaddcust_txtid.setText(id);
     }
 
     /**
