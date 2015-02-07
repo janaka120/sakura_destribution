@@ -16,7 +16,7 @@ import model.add_item_category_model;
  */
 public class Item_category_controler {
     
-    public static void addCustomer(add_item_category_model c) {
+    public static void addItemCategory(add_item_category_model c) {
         try {
             Connection con = DBConnection.getConnection();
             String query = "INSERT INTO item_catagery  VALUES ('" + c.getId() + "','" + c.getType() + "','" + c.getDescription() + "')";
