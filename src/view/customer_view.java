@@ -4,18 +4,19 @@
  */
 package view;
 
+import controler.customer_controler;
 import model.add_customer_model;
 
 /**
  *
  * @author janaka
  */
-public class add_customer extends javax.swing.JFrame {
+public class customer_view extends javax.swing.JFrame {
 
     /**
-     * Creates new form add_customer
+     * Creates new form customer_view
      */
-    public add_customer() {
+    public customer_view() {
         initComponents();
     }
 
@@ -176,10 +177,11 @@ public class add_customer extends javax.swing.JFrame {
         // TODO add your handling code here:
         add_customer_model add_customer= new add_customer_model();
         add_customer.setCustID(tbaddcust_txtid.getText());
-        System.out.println("custID"+add_customer.getCustID());
+        //System.out.println("custID"+customer_view.getCustID());
         add_customer.setCustName(tbaddcust_txtname.getText());
         add_customer.setCustAddress(tbaddcust_txtaddress.getText());
         add_customer.setCustContect(tbaddcust_txtcontect.getText());
+        customer_controler.add_customer(add_customer);
     }//GEN-LAST:event_tbcust_butaddActionPerformed
 
     
@@ -200,20 +202,20 @@ public class add_customer extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(add_customer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(customer_view.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(add_customer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(customer_view.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(add_customer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(customer_view.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(add_customer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(customer_view.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new add_customer().setVisible(true);
+                new customer_view().setVisible(true);
             }
         });
     }
