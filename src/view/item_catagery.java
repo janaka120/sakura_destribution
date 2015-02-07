@@ -125,6 +125,11 @@ public class item_catagery extends javax.swing.JDialog {
         btn_reset.setText("clear");
 
         btn_home.setText("home");
+        btn_home.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_homeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout tb_add_catageryLayout = new javax.swing.GroupLayout(tb_add_catagery);
         tb_add_catagery.setLayout(tb_add_catageryLayout);
@@ -223,6 +228,10 @@ public class item_catagery extends javax.swing.JDialog {
         Item_category_controler.addItemCategory(add);
         
     }//GEN-LAST:event_btn_addActionPerformed
+
+    private void btn_homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_homeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_homeActionPerformed
 
     /**
      * @param args the command line arguments
